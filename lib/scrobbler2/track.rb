@@ -1,8 +1,8 @@
 module Scrobbler2
   class Track < Base
     
-    def initialize(artist, track)
-      @query = {:artist => artist, :track => track}
+    def initialize(artist, track, username = nil)
+      @query = {:artist => artist, :track => track, :username => username}
     end
     
      has_resource :info, :root => 'track'
