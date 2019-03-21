@@ -2,8 +2,8 @@
 module Scrobbler2
   class Artist < Base
     
-    def initialize(artist, username = nil)
-      @query = {:artist => artist, :username => username}
+    def initialize(artist, username = nil, autocorrect=1)
+      @query = {:artist => artist, :username => username, :autocorrect => autocorrect}
     end
 
     has_resource :events, :root => 'events'
